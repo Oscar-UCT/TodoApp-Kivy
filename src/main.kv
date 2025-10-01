@@ -1,0 +1,30 @@
+MDScreen:
+    md_bg_color: self.theme_cls.secondaryContainerColor
+    
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: "10dp"
+
+        MDTopAppBar:
+            type: "small"
+            elevation: 4
+            specific_text_color: 1, 1, 1, 1
+            
+            MDTopAppBarTitle:
+                text: "Tareas"
+                halign: "center"
+
+            MDTopAppBarTrailingButtonContainer:
+                MDActionTopAppBarButton:
+		            id: topbar_btn
+                    icon: "plus"
+        		    on_press: app.añadir_tarea()
+        
+        ScrollView:
+            MDGridLayout:
+                id: subscriptions_container
+                cols: 1
+                adaptive_height: True
+                spacing: "10dp"
+                padding: "10dp"
+
