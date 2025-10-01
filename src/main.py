@@ -37,7 +37,7 @@ def cargar_tareas(self):
     container = self.root.ids.subscriptions_container
 
     container.clear_widgets()
-    for id, descripcion, prioridad, fecha_limite in rows:
+    for id, descripcion, prioridad, fecha_limite, completado in rows:
         card = MDCard(
             style="elevated",
             size_hint_y=None,
